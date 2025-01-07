@@ -1,18 +1,18 @@
 .navbar {
   position: fixed;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: auto;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 0;
-  gap: 40px;
 }
 
 .nav-item {
@@ -38,11 +38,36 @@
 }
 
 @media (max-width: 375px) {
-    .nav {
-        gap: 30px !important;
-        font-size: 12px;
-      padding: 0;
+  .nav {
+    gap: 20px;
+    padding: 5px 0;
+  }
 
-    }
+  .nav-item i {
+    font-size: 18px;
+  }
 
+  .nav-item span {
+    font-size: 10px;
+  }
+}
+
+body {
+  overflow-anchor: none;
+}
+
+input,
+textarea {
+  caret-color: #336183;
+}
+
+.navbar.fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav {
+  max-width: 500px;
+  margin: 0 auto;
 }
