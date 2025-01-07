@@ -1,9 +1,12 @@
-
+import { Fragment } from "react";
+import AddOrderForm from "../components/add/AddOrderForm";
 
 function AddPage() {
   return (
-    <div>AddPage</div>
-  )
+    <Fragment>
+      <AddOrderForm />
+    </Fragment>
+  );
 }
 
-export default AddPage
+export default AddPage;

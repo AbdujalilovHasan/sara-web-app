@@ -1,0 +1,68 @@
+.orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.order-card-left {
+  display: flex;
+  align-items: center;
+}
+
+.order-image {
+  font-size: 50px;
+  color: #666;
+  margin-right: 15px;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.order-phone {
+  font-size: 14px;
+  color: #666;
+  margin: 2px 0 0;
+}
+
+.order-card-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.order-date {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 5px;
+}
+
+.order-time {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.no-orders {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}

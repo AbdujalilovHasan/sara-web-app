@@ -1,0 +1,90 @@
+h3 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #336183;
+}
+
+.date-input {
+  padding: 29.5px 24.5px;
+}
+
+.btn {
+  border: 1px solid #48a674;
+  background: #59ce8f26;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #48a674;
+}
+
+.btn:hover {
+  background: #48a674;
+  color: #fff;
+}
+
+input {
+  border: 1px solid #336183;
+}
+
+.floating-label {
+  position: relative;
+}
+
+.floating-label input,
+.floating-label textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #2863eb;
+  outline: none;
+}
+
+.floating-label span.form-label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px;
+  font-size: 12px;
+  color: #2863eb;
+  z-index: 99999;
+}
+
+.floating-label input::placeholder,
+.floating-label textarea::placeholder {
+  font-size: 16px;
+  color: #a6a6a6;
+}
+
+.input-group .form-control {
+  border-right: 10px;
+}
+
+.input-group .input-group-text {
+  border-left: 0;
+  background: transparent;
+  border: 1px solid #2863eb;
+  border-left: none;
+  padding-right: 10px;
+}
+
+.delete-btn {
+  border: 1px solid #a52424;
+  background: #ce595926;
+  color: #a52424;
+}
+
+.delete-btn:hover {
+  border: 1px solid #a52424;
+  background: #a52424;
+  color: #fff;
+}
