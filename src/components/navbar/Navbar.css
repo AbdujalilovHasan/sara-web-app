@@ -67,6 +67,21 @@
   }
 }
 
+@media (max-width: 426px) {
+  .nav {
+    gap: 20px;
+    padding: 5px 0;
+  }
+
+  .nav-item i {
+    font-size: 18px;
+  }
+
+  .nav-item span {
+    font-size: 10px;
+  }
+}
+
 body {
   overflow-anchor: none;
 }
