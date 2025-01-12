@@ -1,38 +1,44 @@
-import { useState } from "react";
+import { Form, Input, Button, message } from "antd";
 import { useNavigate } from "react-router-dom";
 
-function LoginPage() {
-  const [password, setPassword] = useState("");
+function Login() {
+  const [form] = Form.useForm();
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const userData = JSON.parse(localStorage.getItem("userData"));
-
-    if (userData && userData.password === password) {
-      localStorage.setItem("isLoggedIn", true);
-      alert("Tizimga muvaffaqiyatli kirdingiz!");
+  const onFinish = ({ password }) => {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (storedUser?.password === password) {
+      message.success("Kirish muvaffaqiyatli!");
       navigate("/profile");
     } else {
-      alert("Parol noto'g'ri!");
+      message.error("Parol noto'g'ri!");
     }
   };
 
   return (
-    <form onSubmit={handleLogin} className="mt-5">
+    <div style={{ maxWidth: "400px", margin: "50px auto" }}>
       <h2>Tizimga kirish</h2>
-      <div>
-        <label>Parol:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </div>
-      <button type="submit">Kirish</button>
-    </form>
+      <Form
+        form={form}
+        layout="vertical"
+        onFinish={onFinish}
+        style={{ backgroundColor: "#fff", padding: "20px", borderRadius: "8px", boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)" }}
+      >
+        <Form.Item
+          name="password"
+          label="Parol"
+          rules={[{ required: true, message: "Iltimos, parol kiriting!" }]}
+        >
+          <Input.Password placeholder="Parol kiriting" />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit" block>
+            Kirish
+          </Button>
+        </Form.Item>
+      </Form>
+    </div>
   );
 }
 
-export default LoginPage;
+export default Login;

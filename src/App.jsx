@@ -3,9 +3,9 @@ import HomePage from "./pages/HomePage";
 import AddPage from "./pages/AddPage";
 import Navbar from "./components/navbar/Navbar";
 import EditOrderForm from "./components/add/EditOrderForm";
-import RegistrationPage from "./pages/RegistrationPage";
 import LoginPage from "./pages/LoginPage";
 import ProfilePage from "./pages/ProfilePage";
+import Register from "./pages/RegistrationPage";
 
 function App() {
   const isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           {!isLoggedIn && (
             <>
-              <Route path="/register" element={<RegistrationPage />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="*" element={<Navigate to="/register" replace />} />
             </>

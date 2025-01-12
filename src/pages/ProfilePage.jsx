@@ -1,21 +1,19 @@
-function ProfilePage() {
-  const userData = JSON.parse(localStorage.getItem("userData"));
 
-  if (!userData) {
-    return <div>Foydalanuvchi ma'lumotlari topilmadi.</div>;
-  }
+function ProfilePage() {
+  const user = JSON.parse(localStorage.getItem("user"));
 
   return (
-    <div className="mt-5">
+    <div>
       <h2>Profil</h2>
-      <img
-        src={userData.image}
-        alt={`${userData.name} ${userData.surname}`}
-        style={{ width: "150px", borderRadius: "50%" }}
-      />
-      <p>Ism: {userData.name}</p>
-      <p>Familiya: {userData.surname}</p>
-      <p>Kasb: {userData.job}</p>
+      {user ? (
+        <div>
+          <p>Ism: {user.name}</p>
+          <p>Familiya: {user.surname}</p>
+          <p>Kasb: {user.profession}</p>
+        </div>
+      ) : (
+        <p>Foydalanuvchi ma'lumotlari topilmadi.</p>
+      )}
     </div>
   );
 }
