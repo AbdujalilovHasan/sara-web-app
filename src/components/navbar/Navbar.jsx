@@ -5,7 +5,10 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav">
-        <NavLink to="/" className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}
+        >
           <i className="bi bi-house"></i>
           <span>Asosiy</span>
         </NavLink>
@@ -21,7 +24,7 @@ function Navbar() {
           className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}
         >
           <i className="bi bi-person"></i>
-          <span>Profile</span>
+          <span>Profil</span>
         </NavLink>
       </div>
     </nav>
